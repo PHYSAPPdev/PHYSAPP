@@ -21,7 +21,7 @@ const Footer = ({ id }: {id: string}) => {
       <div className="footer-card">
         <h3>{t("FollowUs")}</h3>
         <div className="social-links">
-          <a href="#"><FaGithub /></a>
+          <a href="https://github.com/PhysAppDev" target="_blank"><FaGithub /></a>
           <a href="#"><FaTwitter /></a>
           <a href="#"><FaPatreon /></a>
         </div>
