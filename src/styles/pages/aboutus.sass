@@ -1,0 +1,61 @@
+@use 'sass:color'
+@use '../variables'
+
+.ab-1
+    padding: 0 3rem
+    width: 65%
+
+    @media (max-width: 600px)
+        padding: none
+
+.aboutus.container
+    flex-direction: row
+    justify-content: space-evenly
+
+    @media (max-width: 1350px)
+        flex-direction: column
+
+    .aboutus-img    
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 10rem
+        height: 10rem
+        background: variables.$text-color-dark
+        box-shadow: 0px 5px 12px -2px variables.$scrollbar-thumb-color
+        border-radius: 10rem
+        overflow: hidden
+
+        @media (max-width: 800px)
+            width: 8rem
+            height: 8rem
+
+        img
+            height: 80%
+
+    .aboutus-img.banner
+        width: 20rem
+        border-radius: 3rem
+
+        img
+            height: 63%
+    
+    .aboutus-text
+        width: 70%
+        font-family: variables.$base-font
+        font-size: 1.2rem
+        font-weight: 500
+        text-indent: 3rem
+        text-align: justify
+        color: variables.$text-color
+
+        @media (max-width: 1360px)
+            width: 100%
+            text-align: left
+
+    .aboutus-text.b
+        width: 60%
+
+        @media (max-width: 1360px)
+            width: 100%
+            text-align: left
