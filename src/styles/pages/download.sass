@@ -1,0 +1,39 @@
+@use 'sass:color'
+@use '../variables'
+
+.buttons-container
+    display: flex
+    justify-content: space-evenly
+    flex-direction: column
+    height: 20rem
+    padding: 0 3rem
+
+    a
+        text-decoration: none
+        width: max-content
+
+    .download-button
+        display: flex
+        justify-content: center
+        align-items: center
+
+        background: variables.$navbar-base-color
+        color: variables.$text-color-dark
+        font-family: variables.$base-font
+        font-size: 1.7rem
+        font-weight: 600
+        text-transform: uppercase
+
+        width: 16rem
+        height: 4.2rem
+
+        cursor: pointer
+        border: none
+        border-radius: 1rem
+
+        box-shadow: 0 0 1.3rem variables.$download-btn-shadow-color
+
+        &:hover
+            background: color.adjust(variables.$navbar-base-color, $saturation: 10%, $lightness: -4%)
+            width: 16.4rem
+            height: 4.6rem

@@ -1,0 +1,62 @@
+@use '../variables'
+
+.aboutproject
+    width: 100% !important
+
+.banner
+    width: 700px
+
+    @media (max-width: 768px)
+        width: 500px
+
+    @media (max-width: 600px)
+        width: 400px
+
+    @media (max-width: 480px)
+        width: 300px
+
+    .banner-img
+        height: 240px
+
+        @media (max-width: 768px)
+            height: 200px
+        
+        @media (max-width: 600px)
+            height: 140px
+
+        @media (max-width: 480px)
+            height: 100px
+
+    .banner-text
+        width: 70%
+
+        font-size: 1.8rem
+        font-weight: 700
+        color: variables.$about-project-text-color
+        text-transform: uppercase
+        text-align: justify
+
+        @media (max-width: 768px)
+            font-size: 1.6rem
+
+        @media (max-width: 600px)
+            font-size: 1.4rem    
+        
+        @media (max-width: 480px)
+            font-size: 1rem
+
+.slogan
+    align-self: flex-start
+    width: max-content
+
+    .slogan-text
+        color: variables.$about-project-text-color
+        font-size: 1.2rem
+
+        @media (max-width: 768px)
+            font-size: 1rem
+
+        @media (max-width: 600px)
+            font-size: 0.8rem    
+
+

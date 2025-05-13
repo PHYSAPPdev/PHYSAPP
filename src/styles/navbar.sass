@@ -1,0 +1,123 @@
+@use './variables'
+
+.navbar
+  display: flex
+  align-items: center
+  justify-content: center
+  position: fixed
+  top: 0
+  width: 100%
+  background: variables.$navbar-base-color
+  padding: 1rem 1rem
+  z-index: 1000
+  box-shadow: 0 4px 60px 4px variables.$navbar-shadow-color
+  transition: all 0.3s ease
+
+  @media (max-width: 560px)
+    padding: 1rem
+    flex-direction: column
+    align-items: flex-start
+
+    &.active ul
+      display: flex
+      margin-top: 1rem
+
+  .dropdown-button
+    display: none
+    margin-bottom: 0.2rem
+    margin-right: 3rem
+    cursor: pointer
+    color: variables.$navbar-text-color
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 1px
+    background: none
+    border: none
+    padding: 0.5rem
+    font-size: 2rem
+    font-family: variables.$base-font
+
+    @media (max-width: 560px)
+      display: block
+      order: -1 // Move button to top
+      align-self: flex-end // Align to right
+      margin-bottom: 0
+
+  ul
+    display: flex
+    justify-content: center
+    gap: 1.4rem
+    list-style: none
+    margin: 0
+    padding: 0
+    transition: all 0.3s ease
+
+    @media (max-width: 700px)
+      gap: 0.2rem
+
+    @media (max-width: 560px)
+      flex-direction: column
+      gap: 0.5rem
+      display: none
+      width: 90%
+
+    li 
+      color: variables.$navbar-text-color
+      cursor: pointer
+      font-weight: 600
+      transition: color 0.3s
+      font-size: 1rem
+      font-family: variables.$base-font
+      text-align: center
+      text-transform: uppercase
+      letter-spacing: 1px
+      padding: 0.5rem 1rem
+      border-radius: 4px
+
+      &:hover 
+        color: variables.$navbar-text-hover
+        background: rgba(white, 0.1)
+
+      @media (max-width: 768px)
+        font-size: 0.9rem
+        padding: 0.5rem
+
+      @media (max-width: 560px)
+        text-align: left
+        padding: 0.8rem 2rem
+        background: rgba(white, 0.05)
+        border-radius: 4px
+
+        &:hover
+          background: rgba(white, 0.1)
+
+.language-selector
+  position: absolute
+  right: 6rem
+  display: flex
+  gap: 0.5rem
+
+  button
+    background: none
+    border: 1px solid variables.$navbar-text-color
+    color: variables.$navbar-text-color
+    padding: 0.2rem 0.5rem
+    border-radius: 4px
+    cursor: pointer
+    font-size: 0.8rem
+    transition: all 0.3s ease
+
+    &:hover
+      background: rgba(white, 0.1)
+
+    &.active
+      background: variables.$navbar-text-color
+      color: variables.$navbar-base-color
+
+  @media (max-width: 980px)
+    position: static
+    right: 0
+  
+  @media (max-width: 560px)
+    align-self: flex-end
+    margin-right: 2rem

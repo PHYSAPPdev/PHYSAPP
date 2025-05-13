@@ -1,0 +1,50 @@
+// Imports
+@use './variables'
+
+// Scroll Bar
+
+// Firefox
+html
+  scrollbar-width: variables.$scrollbar-size !important
+  scrollbar-color: variables.$scrollbar-thumb-color variables.$scrollbar-track-color
+  scrollbar-track-color: variables.$scrollbar-track-color
+
+// Chrome, Safari, Edge
+::-webkit-scrollbar 
+  width: variables.$scrollbar-size
+  height: variables.$scrollbar-size
+
+::-webkit-scrollbar-track 
+  background: variables.$scrollbar-track-color
+
+::-webkit-scrollbar-thumb 
+  background: variables.$scrollbar-thumb-color
+
+  &:hover 
+    background: variables.$scrollbar-thumb-hover
+
+*
+  transition: .2s
+
+body 
+  margin: 0
+  font-family: variables.$base-font
+  background-color: variables.$base-color
+
+.container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+  padding: 2rem 0
+
+
+.sections
+  width: 100%
+
+  .section 
+    width: 90%
+    min-height: 100vh
+    padding: 4rem 2rem
+    scroll-margin-top: 70px
