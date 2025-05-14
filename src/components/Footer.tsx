@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaTwitter, FaPatreon } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaTwitter, FaPatreon } from 'react-icons/fa';
 import '../styles/footer.sass';
 
 const Footer = ({ id }: {id: string}) => {
@@ -12,7 +12,6 @@ const Footer = ({ id }: {id: string}) => {
         <h3>{t("ContactUs")}</h3>
         <ul>
           <li><FaEnvelope /> contact@physapp.com</li>
-          <li><FaPhone /> (55) +13 99999-9999</li>
           <li><FaMapMarkerAlt />{t("Adress")}</li>
         </ul>
       </div>

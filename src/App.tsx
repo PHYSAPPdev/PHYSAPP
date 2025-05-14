@@ -1,6 +1,5 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { SectionNavigator } from './components/SectionNavigator';
 
 import AboutProject from './sections/AboutProject';
 import AboutUs from './sections/AboutUs';
@@ -30,7 +29,6 @@ const App = () => {
       </div>
 
       <Footer id="footer"/>
-      <SectionNavigator />
     </>
   );
 };

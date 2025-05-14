@@ -1,6 +1,20 @@
 @use 'sass:color'
 @use '../variables'
 
+.container.warning
+  flex-direction: row
+
+.warning
+  margin: 0
+  padding: 2rem 0 !important
+  
+  color: variables.$about-project-text-color
+  font-weight: 700
+  font-style: italic
+
+  p
+    margin: 0 1.6rem
+
 .container.download
   flex-direction: row
   justify-content: space-evenly
@@ -40,7 +54,7 @@
         font-size: 1.8rem
 
     .qrcode
-      border: 1px solid green
+      border: 0.2rem solid black
       height: 260px
       width: 260px
 

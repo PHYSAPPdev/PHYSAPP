@@ -14,11 +14,15 @@ const AboutUs = () => {
                         <div className="aboutus-img logo">
                             <img src="/physapp.png" alt="aa" />
                         </div>
-                        <p className="aboutus-text a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corporis aliquam cupiditate explicabo quisquam expedita enim dolor quibusdam, vero excepturi soluta quod aut dolorem aperiam quo error accusamus at! In?</p>
+                        <p className="aboutus-text a">
+                            {t("AboutUsA")}
+                        </p>
                     </div>
 
                     <div className="container aboutus">
-                        <p className="aboutus-text b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corporis aliquam cupiditate explicabo quisquam expedita enim dolor quibusdam, vero excepturi soluta quod aut dolorem aperiam quo error accusamus at! In?</p>
+                        <p className="aboutus-text b">
+                            {t("AboutUsB")}
+                        </p>
                         <div className="aboutus-img banner">
                             <img src="/banner.png" alt="aa" />
                         </div>
