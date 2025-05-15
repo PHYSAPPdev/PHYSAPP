@@ -2,7 +2,6 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-// Traduções
 const resources = {
   en: {
     translation: {
@@ -18,8 +17,8 @@ const resources = {
 
       // About Us
       "Warning": "WARNING: I forgor.",
-      "AboutUsA": "a",
-      "AboutUsB": "b",
+      "AboutUsA": "<strong>PHYSAPP</strong> is a mobile application designed to solve <i>physics calculations</i>—covering <strong>Kinematics</strong>, <strong>Thermodynamics</strong>, and <strong>Electromagnetism</strong>. The app is <strong>open-source</strong>, allowing external contributors to collaborate on its development. Beyond calculations, its main purpose is to <i>help students learn</i> through: <br/>✔ <strong>Study reminders</strong> <br/>✔ <strong>Schedules</strong> <br/>✔ A dedicated calculations section with: <br/> &nbsp;&nbsp;- Simplified formula visualization <br/> &nbsp;&nbsp;- Clear explanations <br/> &nbsp;&nbsp;- Practical examples",
+      "AboutUsB": "The project is still in <i>development</i> and its <strong>beta testing phase</strong>. As an independent initiative, our primary funding comes from <strong>donations</strong>, as we firmly believe education should be <i>democratized</i>—freely accessible to everyone, without financial or social barriers. <br/><br/>Our team currently consists of <strong>third-year students</strong> from the <i>Technical Systems Development</i> course at <strong>Etec de Peruíbe</strong>.",
       
       // Footer
       "ContactUs": "Contact Us",
@@ -45,8 +44,8 @@ const resources = {
       
       // Sobre Nós
       "Warning": "AVISO: Eu esqueci.",
-      "AboutUsA": "PHYSAPP é um projeto em desenvolvimento, criado por alunos do Terceiro Ano do Ensino Médio integrado ao Curso Técnico de Desenvolvimento de Sistemas, que visa compilar as informações e recursos obtidos por meio do aprendizado na ETEC de Peruíbe como forma de demonstrar a capacidade de aplicar o conhecimento adquirido ao longo do tempo.",
-      "AboutUsB": "Este projeto justifica-se através da aplicação das tecnologias que foram apresentadas ao grupo, buscando demonstrar competências que são provenientes do período vivido em ensino progressivo, que carecia de se expressar entre meios de compreensão e melhor interação do público não-programador, estabelecendo o escopo de ensino sobre conceitos da Física que apresentam certa dificuldade àqueles que ainda necessitam de ter derivados de sua presença em seu cotidiano.",
+      "AboutUsA": "<strong>PHYSAPP</strong> consiste-se de uma aplicação mobile voltada a solução de cálculos de <i>física</i> — dos componentes <strong>Cinemática</strong>, <strong>Termodinâmica</strong> e <strong>Eletromagnetismo</strong>. A aplicação é de <strong>código aberto (open-source)</strong>, permitindo colaborações externas. Sua principal finalidade, além da solução de cálculos, é <i>ajudar estudantes</i> através de: <br/>✔ <strong>Lembretes de estudo</strong> <br/>✔ <strong>Cronogramas</strong> <br/>✔ Seção de cálculos com: <br/> &nbsp;&nbsp;- Visualização simplificada de fórmulas <br/> &nbsp;&nbsp;- Legendas explicativas <br/> &nbsp;&nbsp;- Exemplos práticos",
+      "AboutUsB": "O projeto ainda está em <i>desenvolvimento</i> e na sua <strong>fase de teste</strong>. Como iniciativa independente, nossa principal fonte de renda são <strong>doações</strong>, pois acreditamos que a educação deve ser <i>democratizada</i> — livre para todos, sem restrições financeiras ou sociais. <br/><br/>Nossa equipe é formada por <strong>estudantes do terceiro ano</strong> do curso técnico de <i>Desenvolvimento de Sistemas</i> da <strong>Etec de Peruíbe</strong>.",
 
       // Rodape
       "ContactUs": "Nosso Contato",
@@ -55,12 +54,11 @@ const resources = {
       "PrivacyPolicy": "Política de Privacidade",
       "TermsOfService": "Termos de Uso",
       "FAQ": "Perguntas Frequentes",
-      "RightsReserved": "Todos os direitos reservado.",
+      "RightsReserved": "Todos os direitos reservados.",
     }
   }
 };
 
-// src/i18n.ts
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -68,11 +66,11 @@ i18n
     resources,
     fallbackLng: 'en',
     interpolation: {
-      escapeValue: false // IMPORTANTE para permitir HTML
+      escapeValue: false // Permite HTML
     },
     react: {
-      transSupportBasicHtmlNodes: true, // Permite <br/> básico
-      transKeepBasicHtmlNodesFor: ['br'] // Mantém apenas tags br
+      transSupportBasicHtmlNodes: true,
+      transKeepBasicHtmlNodesFor: ['br', 'strong', 'em', 'i', 'u'] // Permite tags de formatação
     }
   });
 

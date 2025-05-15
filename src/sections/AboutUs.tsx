@@ -14,15 +14,11 @@ const AboutUs = () => {
                         <div className="aboutus-img logo">
                             <img src="/physapp.png" alt="aa" />
                         </div>
-                        <p className="aboutus-text a">
-                            {t("AboutUsA")}
-                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: t('AboutUsA') }} />
                     </div>
 
                     <div className="container aboutus">
-                        <p className="aboutus-text b">
-                            {t("AboutUsB")}
-                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: t('AboutUsB') }} />
                         <div className="aboutus-img banner">
                             <img src="/banner.png" alt="aa" />
                         </div>
