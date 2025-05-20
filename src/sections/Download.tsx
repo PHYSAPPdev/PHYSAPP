@@ -10,7 +10,7 @@ const DownloadItems = () => {
     const downloadItems = [
         {
             name: "Github",
-            url: "#",
+            url: "https://github.com/PHYSAPPdev/PHYSAPPapp",
             icon: <FaGithub size={"2.6rem"} className="icon" />,
             qrCode: qrcode,
         },

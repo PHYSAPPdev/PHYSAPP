@@ -38,7 +38,6 @@ const Navbar = () => {
       <ul>
         <li onClick={() => scrollToSection('aboutproject')}>{t("AboutProject")}</li>
         <li onClick={() => scrollToSection('aboutus')}>{t("AboutUs")}</li>
-        <li onClick={() => scrollToSection('manual')}>{t("Manual")}</li>
         <li onClick={() => scrollToSection('download')}>{t("Download")}</li>
       </ul>
     </div>

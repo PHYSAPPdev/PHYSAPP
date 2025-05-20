@@ -4,7 +4,6 @@ import SectionNavigator from './components/SectionNavigator';
 
 import AboutProject from './sections/AboutProject';
 import AboutUs from './sections/AboutUs';
-import Manual from './sections/Manual';
 import Download from './sections/Download';
 
 import './styles/global.sass';
@@ -20,9 +19,6 @@ const App = () => {
         </section>
         <section id="aboutus" className="section">
           <AboutUs />
-        </section>
-        <section id="manual" className="section">
-          <Manual />
         </section>
         <section id="download" className="section">
           <Download />
