@@ -1,0 +1,98 @@
+@use "../variables.sass" as v
+
+.navbar
+    width: 100%
+    height: 5rem
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: v.$brown-color
+    box-shadow: 0 0 10px 2px v.$darkbrown-color
+    color: v.$white-color
+    text-transform: uppercase
+    position: fixed
+    top: 0
+    z-index: 1000
+
+    .nav-links
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 1rem
+
+        .nav-item
+            min-width: 10rem
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+
+            button
+                padding: 1rem
+                cursor: pointer
+                font-size: 1.1rem
+                font-weight: 500
+                color: v.$white-color
+                text-transform: uppercase
+                background-color: transparent
+                border: none
+                border-radius: 0.6rem
+                transition: all 0.3s ease
+                width: 100%
+                text-align: center
+
+                &:hover
+                    background-color: v.$middarkbrown-color
+                    color: v.$orange-color
+                    transform: translateY(-2px)
+
+    .mobile-menu-icon
+        display: none
+        cursor: pointer
+        font-size: 1.5rem
+        color: v.$white-color
+
+        &:hover
+            color: v.$orange-color
+
+// Responsividade
+@media (max-width: 768px)
+    .navbar
+        position: fixed
+        top: 0
+        z-index: 1000
+
+        .mobile-menu-icon
+            display: block
+
+        .nav-links
+            position: absolute
+            top: 5rem
+            left: 0
+            width: 100%
+            background-color: v.$darkbrown-color
+            flex-direction: column
+            align-items: stretch
+            gap: 0
+            max-height: 0
+            overflow: hidden
+            transition: max-height 0.3s ease-out
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1)
+
+            &.active
+                max-height: 500px
+                padding: 1rem 0
+                border-top: 1px solid v.$middarkbrown-color
+
+            .nav-item
+                width: 100%
+                min-width: auto
+                padding: 0.5rem 0rem
+
+                button
+                    text-align: left
+                    border-radius: 0
+
+                    &:hover
+                        transform: none
+                        background-color: v.$middarkbrown-color

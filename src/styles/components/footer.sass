@@ -1,0 +1,111 @@
+@use "../variables.sass" as v
+
+.footer
+    background-color: v.$darkbrown-color
+    color: v.$wheat-color
+    padding: 2rem 0 0
+    font-family: 'Arial', sans-serif
+    width: 100%
+    cursor: default
+
+    &-content
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        max-width: 1200px
+        margin: 0 auto
+        padding: 0 20px
+
+    &-section
+        flex: 1
+        min-width: 250px
+        margin-bottom: 2rem
+        padding: 0 15px
+
+        h3
+            color: v.$wheat-color
+            margin-bottom: 1rem
+            font-size: 1.2rem
+            position: relative
+            padding-bottom: 0.5rem
+
+            &::after
+                content: ''
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 50px
+                height: 2px
+                background-color: v.$gray-color
+
+    .contact-info
+        list-style: none
+        padding: 0
+
+        li
+            display: flex
+            align-items: center
+            margin-bottom: 0.8rem
+
+            span:hover
+                color: darken(v.$wheat-color, 20)
+
+        .icon
+            margin-right: 10px
+            color: v.$wheat-color
+
+    .social-links
+        display: flex
+        gap: 15px
+
+        .social-icon
+            color: v.$wheat-color
+            font-size: 1.5rem
+            transition: color 0.3s ease
+
+            &:hover
+                color: desaturate(v.$orange-color, 35)
+
+    .useful-links
+        list-style: none
+        padding: 0
+
+        li
+            margin-bottom: 0.5rem
+
+        a
+            color: v.$wheat-color
+            text-decoration: none
+            transition: color 0.3s ease
+
+            &:hover
+                color: v.$orange-color
+
+    &-bottom
+        background-color: darken(v.$darkbrown-color, 5%)
+        text-align: center
+        padding: 1rem 0
+        font-size: 0.9rem
+
+// Responsividade
+@media (max-width: 768px)
+    .footer
+        &-content
+            flex-direction: column
+            align-items: center
+            text-align: center
+
+        &-section
+            margin-bottom: 2rem
+            padding: 0 0
+            width: 100%
+
+            h3::after
+                left: 50%
+                transform: translateX(-50%)
+
+        .contact-info li
+            justify-content: center
+
+        .social-links
+            justify-content: center
